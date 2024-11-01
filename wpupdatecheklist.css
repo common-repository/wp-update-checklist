@@ -1,0 +1,56 @@
+/* Remove margins and padding from the list */
+ul#pwupcheck_update_checklist {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+  max-width: 90%;
+}
+
+/* Style the list items */
+ul#pwupcheck_update_checklist li {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 8px 6px 40px;
+  background: #eee;
+  font-size: 16px;
+  transition: 0.2s;
+  margin: 0;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul#pwupcheck_update_checklist li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul#pwupcheck_update_checklist li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul#pwupcheck_update_checklist li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul#pwupcheck_update_checklist li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 5px;
+  left: 10px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
